@@ -4,7 +4,7 @@
 
 The purpose of this guide is to provide instructions for running JupyterLab on the CMCC HPC systems (Zeus and Juno) from a compute node. JupyterLab, developed and maintained by Jupyter, is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design invites extensions to expand and enrich functionality. More information on JupyterLab can be found [here](https://jupyter.org).
 
-Admittedly, this process is quite convoluted and it would be great to have a [JupyterHub](https://jupyter.org/hub) installation at CMCC to bypass all this. We will inquiry with the HPC Systems Management if this is a possibility
+Admittedly, this process is quite convoluted and it would be great to have a [JupyterHub](https://jupyter.org/hub) installation at CMCC to bypass all this. We will inquiry with the HPC Systems Management if this is a possibility.
 
 ### How to get help
 
@@ -86,7 +86,7 @@ This step is needed to make sure we can access our JupyterLab from a browser. In
 ssh -l cmcc_user zeus01.cmcc.scc -L 8888:n###:8888
 ```
 
-where `cmcc_user` is the username your HPC CMCC username, `n###` is the node number from the previous step.
+where `cmcc_user` is the your CMCC HPC username, `n###` is the node number from the previous step.
 
 Now open your browser and open the page [http://localhost:8888/lab](http://localhost:8888/lab) and you should be able to access JupyterLab. The password to access JupyterLab might be required if you set it. 
 
