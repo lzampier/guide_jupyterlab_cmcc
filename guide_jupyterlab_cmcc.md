@@ -93,7 +93,7 @@ Now open your browser and open the page [http://localhost:8888/lab](http://local
 
 ### Step 3 – Adding more kernels to Jupyterlab
 
-The Python kernel used by default by your lab is the one you launched from. In our case, it is `generic`. To create a new conda environment and install it as IPython kernel do the following.
+The Python kernel used by default by your lab is the one you launched `jupyter lab --no-browser --ip=0.0.0.0` from. In our case, it is `generic`. To create a new conda environment and install it as IPython kernel do the following.
 
 ```
 conda create --name myenv
@@ -102,4 +102,4 @@ mamba install -c conda-foge ipykernel
 python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
 ```
 
-You should now see a kernel Python `(myenv)` in JupyterLab.
+You should now see a kernel `Python (myenv)` in JupyterLab.
