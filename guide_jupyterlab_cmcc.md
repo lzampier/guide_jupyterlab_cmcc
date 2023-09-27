@@ -12,7 +12,7 @@ If these steps do not work for you, feel free to open an issue in this git repos
 
 ### Additional resources 
 
-A lot of this is inspired by this guide: [How to Connect to JupyterLab Remotely](https://towardsdatascience.com/how-to-connect-to-jupyterlab-remotely-9180b57c45bb) and by several posts in Stack Overflow. Also, running this requires to have some familiarity with [`conda`](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html) or [`mamba`](https://mamba.readthedocs.io/en/latest/) to manage your kernels to deploy on JupyterLab. Also, I assume you have the login credentials for the CMCC HPC platforms, and that you have space for storing your data on the systems.
+A lot of this is inspired by this guide: [How to Connect to JupyterLab Remotely](https://towardsdatascience.com/how-to-connect-to-jupyterlab-remotely-9180b57c45bb) and by several posts in Stack Overflow. Also, running this requires to have some familiarity with [`conda`](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html) or [`mamba`](https://mamba.readthedocs.io/en/latest/) to manage your kernels to deploy on JupyterLab. Finally, I assume you have the login credentials for the CMCC HPC platforms, and that you have space for storing your data on the systems.
 
 
 ## STEP BY STEP GUIDE
@@ -91,7 +91,7 @@ where `cmcc_user` is the your CMCC HPC username, `n###` is the node number from 
 Now open your browser and open the page [http://localhost:8888/lab](http://localhost:8888/lab) and you should be able to access JupyterLab. The password to access JupyterLab might be required if you set it. 
 
 
-### Step 3 – Adding more kernels to Jupyterlab
+### Step 4 – Adding more kernels to Jupyterlab
 
 The Python kernel used by default by your lab is the one you launched `jupyter lab --no-browser --ip=0.0.0.0` from. In our case, it is `generic`. To create a new conda environment and install it as IPython kernel do the following.
 
@@ -103,3 +103,7 @@ python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
 ```
 
 You should now see a kernel `Python (myenv)` in JupyterLab.
+
+### Additional suggestions
+
+You might notice that your conda installation slows down after a while, or cannot even complete operations like installing new packages or updating environments. This might be due to the fact that your `.conda` is in your `users_home` directory, and you filled all the space available. To solve this issue, I suggest moving the `.conda` somewhre else, possibly in a folder with a substantial amount of space, and create a symbolic link in your home directory.
