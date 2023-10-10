@@ -88,7 +88,7 @@ ssh -l cmcc_user zeus01.cmcc.scc -L 8888:n###:8888
 
 where `cmcc_user` is the your CMCC HPC username, `n###` is the node number from the previous step.
 
-Now open your browser and open the page [http://localhost:8888/lab](http://localhost:8888/lab) and you should be able to access JupyterLab. The password to access JupyterLab might be required if you set it. 
+Now open your browser and open the page [http://localhost:8888/lab](http://localhost:8888/lab) and you should be able to access JupyterLab. The password to access JupyterLab might be required if you set it. Note that this does not work if another running program, for example a local jupyter lab, is occupying the 8888 port.
 
 
 ### Step 4 – Adding more kernels to Jupyterlab
