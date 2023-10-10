@@ -80,10 +80,13 @@ jupyter lab --no-browser --ip=0.0.0.0
 
 ### Step 3 – Port forwarding Jupyterlab
 
-This step is needed to make sure we can access our JupyterLab from a browser. In a new terminal, connect to Zeus (or Juno) via
+This step is needed to make sure we can access our JupyterLab from a browser. In a new terminal, connect to Zeus or Juno via
 
 ```
 ssh -l cmcc_user zeus01.cmcc.scc -L 8888:n###:8888
+```
+```
+ssh -l cmcc_user login1.juno.cmcc.scc -L 8888:n###:8888
 ```
 
 where `cmcc_user` is the your CMCC HPC username, `n###` is the node number from the previous step.
