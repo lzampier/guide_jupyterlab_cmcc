@@ -101,7 +101,7 @@ The Python kernel used by default by your lab is the one you launched `jupyter l
 ```
 conda create --name myenv
 conda activate myenv
-mamba install -c conda-foge ipykernel
+mamba install -c conda-forge ipykernel
 python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
 ```
 
