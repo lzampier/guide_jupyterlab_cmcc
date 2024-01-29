@@ -1,3 +1,6 @@
+!! ATTENTION !!
+
+**THIS METHOD IS DEPRECATED ON JUNO SINCE THE RELEASE OF [JupyterHub](http://jupyterhub.juno.cmcc.scc:8000/). Detailed documentation documentation on accessing this service can be found [here](https://drive.google.com/file/d/11UGEdOiOHGR45U0QJAGN5K3-5Cs1R08p/view).**
 # JupyterLab on the CMCC HPC system
 
 ### Purpose
